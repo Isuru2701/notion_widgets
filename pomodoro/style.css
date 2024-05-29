@@ -15,32 +15,32 @@ body {
 
 button,
 button:active {
-  background-color: rgb(234,178,156);
+  background-color: rgb(211, 113, 173);
   border: none;
   width: 42px;
   height: 40px;
   border-radius: 100%;
   text-align: center;
-  box-shadow: 0.2em 0.2em rgb(194, 91, 44);
-  -webkit-box-shadow: 0.2em 0.2em rgb(194, 91, 44);
-  -moz-box-shadow: 0.2em 0.2em rgb(194, 91, 44);
+  box-shadow: 0.2em 0.2em rgb(13, 53, 75);
+  -webkit-box-shadow: 0.2em 0.2em rgb(13, 53, 75);
+  -moz-box-shadow: 0.2em 0.2em rgb(13, 53, 75);
 }
 
 button:focus {
   translate: 0.2em 0.2em;
-  box-shadow: 0.2em 0.2em rgb(194, 91, 44) inset;
-  -webkit-box-shadow: 0.2em 0.2em rgb(194, 91, 44) inset;
-  -moz-box-shadow: 0.2em 0.2em rgb(194, 91, 44) inset;
+  box-shadow: 0.2em 0.2em rgb(13, 53, 75) inset;
+  -webkit-box-shadow: 0.2em 0.2em rgb(13, 53, 75) inset;
+  -moz-box-shadow: 0.2em 0.2em rgb(13, 53, 75) inset;
 }
 
 /* Clock Body */
 
 .clock-container {
-  background-color: rgb(240, 240, 190); 
+  background-color: rgb(221, 221, 221); 
   width: 250px;
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 10px 10px sienna;
+  box-shadow: 10px 10px rgb(31,31,31);
 }
 
 /* Display + Stop/Start/Reset Controls */
@@ -48,10 +48,11 @@ button:focus {
 #time-left {
   font-size: 65px;
   text-align: center;
-  background-color: rgb(150,180,175);
+  background-color: #90a5e9;
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 3px 3px rgb(121, 145, 141) inset;
+  box-shadow: 3px 3px rgb(46, 46, 46) inset;
+  color: black;
 }
 
 #display-controls {
@@ -66,11 +67,12 @@ button:focus {
   font-size: 15px;
   text-align: center;
   padding-top: 2px;
-  background-color: rgb(150,180,175);
+  background-color: #90a5e9;
   border-radius: 10px;
   height: 30px;
   flex: 2;
-  box-shadow: 3px 3px rgb(121, 145, 141) inset;
+  box-shadow: 3px 3px rgb(46,46,46) inset;
+  /* color:white; */
 }
 
 #timer-ssr {
@@ -90,11 +92,10 @@ button:focus {
 }
 
 .inc-dec-btn-container {
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 120px;
+  width: 100%;
   height:60px;
 }
 
@@ -102,7 +103,7 @@ button:focus {
 .session-container {
   text-align: center;
 /*   display: inline-block; */
-  border: 2px solid rgb(234,178,156);
+  border: 2px solid rgb(109, 26, 81);
   padding: 10px;
   border-radius: 10px;
   width: 40%;
