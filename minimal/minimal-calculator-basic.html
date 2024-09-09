@@ -14,6 +14,7 @@ body {
   margin: 0 auto;
   text-align: center;
   font-size: 23px;
+  background-color: #2F3438;
 
 
 }
@@ -36,7 +37,7 @@ body {
 .calculator {
   
     display: inline-block;
-    background: #000;
+    background: transparent;
     margin: 1% 0;
     color: black;
     border: 3px solid #fff;
@@ -63,7 +64,7 @@ body {
 }
 
 .calculator .accent{
-   background: #000; color:#fff;;
+   background: transparent; color:#fff;;
 }
 
 .calculator .space {
@@ -73,8 +74,8 @@ body {
     min-height: 2.4em;
     margin: 0.5%;
     border-radius: 15%;
-    border: 0.08em solid #000;
-    background: #000;
+    border: 0.08em solid transparent;
+    background: transparent;
 
 
 }
@@ -122,8 +123,8 @@ body {
     overflow-wrap: break-word;
     font-size: 30px;
     font-family: monospace;
-    background-color: #fff;
-    color: #000;
+    background-color: transparent;
+    color: white;
 
 }
 
@@ -296,6 +297,51 @@ var buttons = document.getElementsByClassName("button");
     }
   });
 });
+
+document.addEventListener("keydown", function(event) {
+  let key = event.key;
+  if (key >= 0 && key <= 9) {
+      handleInput(key);
+  } else if (key === "+" || key === "-" || key === "*" || key === "/" || key === "%") {
+      handleInput(key);
+  } else if (key === "Enter") {
+      handleInput("=");
+  } else if (key === "Backspace") {
+      handleInput("AC");
+  } else if (key === "Escape") {
+      handleInput("AC");
+  } else if (key === ".") {
+      handleInput(".");
+  } else if (key === "(" || key === ")") {
+      handleInput(key);
+  }
+});
+
+function handleInput(input) {
+  if (input != "=" && input != "AC" && input != "*" && input != "/" && input != "√" && 
+      input != "+" && input != "%" && input != "=" && input != "-" && input != "x^") {
+      display.value += input;
+  } else if (input === "=") {
+      equals();
+  } else if (input === "AC") {
+      clear();
+  } else if (input === "*") {
+      multiply();
+  } else if (input === "/") {
+      divide();
+  } else if (input === "+") {
+      plus();
+  } else if (input === "-") {
+      minus();
+  } else if (input === "%") {
+      percent();
+  } else if (input === "√") {
+      squareRoot();
+  } else if (input === "x^") {
+      exponent();
+  }
+}
+
 
 
 function syntaxError() {
